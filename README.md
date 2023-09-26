@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/plscabral/MVP1-Noticiei-Front">
+  <a href="https://github.com/plscabral/MVP3-Noticiei-Frontend">
     <img src="/public/favicon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -19,6 +19,7 @@ Uma plataforma que tem como objetivo, levar as noticias de uma forma fácil, sim
 * [![React][React]][React-url]
 * [![Chakra][Chakra]][Chakra-url]
 * [![Vite][Vite]][Vite-url]
+* [![Docker][Docker]][Docker-url]
 
 ### Pré-requisitos
 
@@ -38,11 +39,21 @@ Uma plataforma que tem como objetivo, levar as noticias de uma forma fácil, sim
 
 1. Clonar o repositório
    ```sh
-   git clone https://github.com/plscabral/MVP1-Noticiei-Front.git
+   git clone https://github.com/plscabral/MVP3-Noticiei-Frontend.git
    ```
 2. Instalar as dependências do projeto
    ```sh
    npm install ou yarn install
+   ```
+
+### Docker
+1. Buildar projeto
+   ```sh
+   docker build -t noticiei-frontend .
+   ```
+2. Configurar a porta de acesso
+   ```sh
+   docker run -p 3333:3333 noticiei-frontend
    ```
 
 ### Execução
@@ -65,3 +76,5 @@ Uma plataforma que tem como objetivo, levar as noticias de uma forma fácil, sim
 [Chakra-url]: https://chakra-ui.com/
 [Vite]: https://img.shields.io/badge/Vite-20232A?style=for-the-badge&logo=vite&logoColor=61DAFB
 [Vite-url]: https://vitejs.dev/
+[Docker]: https://img.shields.io/badge/Docker-20232A?style=for-the-badge&logo=docker&logoColor=61DAFB
+[Docker-url]: https://www.docker.com/
