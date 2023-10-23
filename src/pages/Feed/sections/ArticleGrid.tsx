@@ -16,12 +16,13 @@ export function ArticleGrid({ term }: Props) {
 
 	async function handleGetArticles() {
 		await fetch(
-			`https://newsapi.org/v2/everything?q=${term}&sortBy=publishedAt&apiKey=3bf9c14f840245fcb11c521bfee34767&language=pt`, {
+			`https://newsapi.org/v2/everything?q=${term}&sortBy=publishedAt&apiKey=61df58bb879f4cf7af74faa8e4905736&language=pt`, {
 				method: "GET",
-			}).then((response) => response.json()).then((responseData) => {
-			console.log(responseData);
-			setArticles(responseData.articles);
-		});
+			})
+			.then((response) => response.json())
+			.then((responseData) => {
+				setArticles(responseData.articles?.filter((x: Article) => x.title !== "[Removed]" && x.title !== null));
+			});
 	}
 
 	useEffect(() => {
